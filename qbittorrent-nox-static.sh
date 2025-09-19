@@ -3119,7 +3119,7 @@ while (("${#}")); do
 				[[ ${github_tag[libtorrent]} =~ ^libtorrent- ]] && app_version[libtorrent]="${github_tag[libtorrent]#libtorrent-}" app_version[libtorrent]="${app_version[libtorrent]//_/\.}"
 				[[ ${github_tag[libtorrent]} =~ ^libtorrent_ ]] && app_version[libtorrent]="${github_tag[libtorrent]#libtorrent_}" app_version[libtorrent]="${app_version[libtorrent]//_/\.}"
 				[[ ${github_tag[libtorrent]} =~ ^v[0-9] ]] && app_version[libtorrent]="${github_tag[libtorrent]#v}"
-				source_archive_url[libtorrent]="https://github.com/fqdeng/libtorrent/releases/download/${github_tag[libtorrent]}/libtorrent-rasterbar-${app_version[libtorrent]}.tar.gz"
+				source_archive_url[libtorrent]="https://github.com/fqdeng/libtorrent/archive/refs/tags/v2.0.11.tar.gz"
 				if ! _curl "${source_archive_url[libtorrent]}" &> /dev/null; then
 					source_default[libtorrent]="folder"
 				fi
