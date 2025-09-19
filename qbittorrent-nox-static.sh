@@ -1976,7 +1976,7 @@ _apply_patches() {
 		if [[ ${app_name} == "libtorrent" ]]; then
 			local jamfile_dest="${qbt_dl_folder_path}/Jamfile"
 			if [[ ${qbt_libtorrent_master_jamfile} == "yes" ]]; then
-				_curl "https://raw.githubusercontent.com/fqdeng/libtorrent/${default_jamfile}/Jamfile" -o "${jamfile_dest}"
+				_curl "https://raw.githubusercontent.com/fqdeng/libtorrent/refs/tags/v2.0.11/Jamfile" -o "${jamfile_dest}"
 			elif [[ -f "${patch_dir}/Jamfile" ]]; then
 				cp -f "${patch_dir}/Jamfile" "${jamfile_dest}"
 			else
