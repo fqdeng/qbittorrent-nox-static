@@ -1545,7 +1545,7 @@ _set_module_urls() {
 	source_archive_url[double_conversion]="https://github.com/google/double-conversion/archive/refs/tags/${github_tag[double_conversion]}.tar.gz"
 	source_archive_url[openssl]="https://github.com/openssl/openssl/releases/download/${github_tag[openssl]}/${github_tag[openssl]}.tar.gz"
 	_boost_url # function to test and set the boost url and more
-	source_archive_url[libtorrent]="https://github.com/fqdeng/libtorrent/releases/download/${github_tag[libtorrent]}/libtorrent-rasterbar-${github_tag[libtorrent]#v}.tar.gz"
+	source_archive_url[libtorrent]="https://github.com/fqdeng/libtorrent/archive/refs/tags/v2.0.11.tar.gz"
 
 	read -ra qt_version_short_array <<< "${app_version[qtbase]//\./ }"
 	qt_version_short="${qt_version_short_array[0]}.${qt_version_short_array[1]}"
